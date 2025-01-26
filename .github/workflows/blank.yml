@@ -1,22 +1,21 @@
-# .github/workflows/gruploader.yaml
 on:
-  release:
-    types: [created]
+ workflow_dispatch:
 
 permissions:
-    contents: write
-    packages: write
+   contents: write
+   packages: write
 
 jobs:
-  release-linux-amd64:
-    name: release linux/amd64
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - uses: izhiqiang/gruploader@develop
-      with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        action: files
-        extra_files: 
-          README.md
-          LICENSE
+ release-linux-amd64:
+   name: release linux/amd64
+   runs-on: ubuntu-latest
+   steps:
+   - uses: actions/checkout@v4
+   - name: Set up Go
+     uses: actions/setup-go@v4
+     with:
+       go-version: '1.20'
+   - name: Build
+     run:  curl -sSL https://raw.githubusercontent.com/izhiqiang/deploy-cli/main/sh/actions-run.sh | bash
+     env:
+       DEPLOY_HOSTS: "ssh://root:123456@127.0.0.1"
