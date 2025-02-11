@@ -17,7 +17,7 @@ jobs:
       with:
         github_token: ${{ secrets.GH_TOKEN }}
         action: golangs
-        bin_name: test
+        bin_name: test2
         maingo: t/main.go
         extra_files: 
           README.md
