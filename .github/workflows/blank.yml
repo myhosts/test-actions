@@ -14,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Execute publishing script
-      run: env
-      shell: bash
+    - uses: pkg6/gruploader-action@main
+      with:
+        github_token: ${{ secrets.GH_TOKEN }}
+        action: gh-page
