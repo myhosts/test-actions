@@ -17,4 +17,6 @@ jobs:
     - uses: pkg6/gruploader-action@develop
       with:
         github_token: ${{ secrets.GH_TOKEN }}
-        action: gh-page
+        action: golangs
+        bin_name: test
+        extra_files: README.md LICENSE
