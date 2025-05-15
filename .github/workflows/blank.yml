@@ -14,9 +14,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: pkg6/gruploader-action@develop
-      with:
-        github_token: ${{ secrets.GH_TOKEN }}
-        action: golangs
-        bin_name: test
-        extra_files: README.md LICENSE
+    - uses: chihqiang/ssh-deploy-action@main
