@@ -11,7 +11,7 @@ permissions:
 jobs:
   release-linux-amd64:
     name: release linux/amd64
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
     - name: run env
