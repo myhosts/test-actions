@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: run set env
-      run: "export AAAA=1"
+      run: echo "MY_VAR=HelloWorld" >> $GITHUB_ENV
     - name: run env
       run: env
     # - uses: pkg6/gruploader-action@main
