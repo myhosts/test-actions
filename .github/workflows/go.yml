@@ -21,6 +21,8 @@ jobs:
         branch: main
     - name: run env
       run: env
+    - name: run pwd
+      run: pwd
     # - uses: pkg6/gruploader-action@main
     #   with:
     #     github_token: ${{ secrets.GH_TOKEN }}
