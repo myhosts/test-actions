@@ -14,6 +14,8 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
+    - name: run set env
+      run: export AAAA=1
     - name: run env
       run: env
     # - uses: pkg6/gruploader-action@main
