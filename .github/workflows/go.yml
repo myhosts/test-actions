@@ -14,8 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: run set env
-      run: echo "MY_VAR=HelloWorld" >> $GITHUB_ENV
+    - name: Clone public repo via HTTPS
+      uses: chihqiang/checkout-action@main
+      with:
+        repo: https://github.com/pkg6/think-auth.git
+        branch: main
     - name: run env
       run: env
     # - uses: pkg6/gruploader-action@main
