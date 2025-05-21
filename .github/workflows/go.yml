@@ -20,6 +20,8 @@ jobs:
         branch: main
         dest: .
     - name: run env
+      run: env
+    - name: run env
       run: ls -al
     # - uses: pkg6/gruploader-action@main
     #   with:
