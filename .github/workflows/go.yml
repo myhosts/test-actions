@@ -17,7 +17,7 @@ jobs:
       uses: chihqiang/checkout-action@develop
       with:
         repo: https://github.com/pkg6/think-auth.git
-        branch: main
+        branch: main2
         dest: .
     - name: run env
       run: env
