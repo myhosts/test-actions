@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Clone public repo via HTTPS
-      uses: chihqiang/checkout-action@develop
+      uses: chihqiang/checkout-action@main
       with:
         repo: https://github.com/myhosts/drawdb-io.git
         branch: main
