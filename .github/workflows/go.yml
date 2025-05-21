@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Clone public repo via HTTPS
-      uses: chihqiang/checkout-action@main
+      uses: chihqiang/checkout-action@develop
       with:
         repo: https://github.com/pkg6/think-auth.git
         branch: main
