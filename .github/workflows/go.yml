@@ -16,7 +16,7 @@ jobs:
     - name: Clone public repo via HTTPS
       uses: chihqiang/checkout-action@develop
       with:
-        repo: https://github.com/myhosts/test-action-private.git
+        repo: https://github.com/myhosts/drawdb-io.git
         branch: main
         dest: .
     - name: run env
