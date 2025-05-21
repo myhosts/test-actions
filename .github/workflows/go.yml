@@ -16,8 +16,8 @@ jobs:
     - name: Clone public repo via HTTPS
       uses: chihqiang/checkout-action@develop
       with:
-        repo: https://github.com/pkg6/think-auth.git
-        branch: main2
+        repo: git@github.com:myhosts/test-action-private.git
+        branch: main
         dest: .
     - name: run env
       run: env
