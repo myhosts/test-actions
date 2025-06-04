@@ -14,22 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Clone public repo via HTTPS
-      uses: chihqiang/checkout-action@main
+    - uses: pkg6/gruploader-action@main
       with:
-        repo: https://github.com/myhosts/drawdb-io.git
-        branch: main
-        dest: .
-    - name: run env
-      run: env
-    - name: run env
-      run: ls -al
-    # - uses: pkg6/gruploader-action@main
-    #   with:
-    #     github_token: ${{ secrets.GH_TOKEN }}
-    #     action: golangs
-    #     bin_name: test
-    #     goversion: 1.23.4
-    #     extra_files: 
-    #       README.md
-    #       LICENSE
+        github_token: ${{ secrets.GH_TOKEN }}
+        action: golangs
+        bin_name: test
+        goversion: 1.23.4
+        extra_files: 
+          README.md
+          LICENSE
